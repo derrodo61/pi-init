@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,8 +48,13 @@
         }
 
         @keyframes shimmer {
-            0% { background-position: 0% center; }
-            100% { background-position: 200% center; }
+            0% {
+                background-position: 0% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
         }
 
         .glow {
@@ -83,16 +89,21 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(100vh) rotate(0deg);
                 opacity: 0;
             }
+
             10% {
                 opacity: 1;
             }
+
             90% {
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(-100vh) rotate(720deg);
                 opacity: 0;
@@ -114,6 +125,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -133,8 +145,17 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 0.03; transform: translate(-50%, -50%) scale(1); }
-            50% { opacity: 0.06; transform: translate(-50%, -50%) scale(1.1); }
+
+            0%,
+            100% {
+                opacity: 0.03;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                opacity: 0.06;
+                transform: translate(-50%, -50%) scale(1.1);
+            }
         }
 
         .border-glow {
@@ -154,8 +175,13 @@
         }
 
         @keyframes borderRotate {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
         }
 
         @media (max-width: 768px) {
@@ -163,6 +189,7 @@
                 font-size: 2.5rem;
                 letter-spacing: 2px;
             }
+
             .subtitle {
                 font-size: 0.9rem;
                 letter-spacing: 4px;
@@ -170,16 +197,17 @@
         }
     </style>
 </head>
+
 <body>
     <div class="pi-symbol">π</div>
-    
+
     <div class="particles" id="particles"></div>
-    
+
     <div class="border-glow"></div>
-    
+
     <div class="container">
         <div class="glow"></div>
-        <h1 class="gradient-text">Learn PI<br>and make money!</h1>
+        <h1 class="gradient-text">Learn PI<br>and succeed!</h1>
         <p class="subtitle">Unlock your potential</p>
     </div>
 
@@ -204,9 +232,10 @@
             const glow = document.querySelector('.glow');
             const x = e.clientX / window.innerWidth;
             const y = e.clientY / window.innerHeight;
-            
+
             glow.style.transform = `translate(calc(-50% + ${(x - 0.5) * 30}px), calc(-50% + ${(y - 0.5) * 30}px))`;
         });
     </script>
 </body>
+
 </html>
